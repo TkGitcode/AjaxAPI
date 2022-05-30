@@ -1,22 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fetch a Data</title>
+    <style>
+        table th {
+            border: 2px solid black;
+            height: 50px;
+            margin-top: 15px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+    </style>
 </head>
+
 <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <div>
-        <button id="get-btn" >Get button</button>
+        <button id="get-btn">Get button</button>
         <button id="post-btn">Post Button</button>
         <button id="put-btn">Put Button</button>
         <button id="delete-btn">Delete Button</button>
     </div>
 
-    <div id="textView">
+    <!-- <form id="emp-form" style="display: none;"> -->
+        <div id="emp-form" style="display: none;">
+            Enter FirstName : <input type="text" id="fst-name"></input><br>
+            Enter SecondName : <input type="text" id="scd-name"></input><br>
+            Enter Email : <input type="text" id="email-adrs"></input><br>
+            Enter Gender : <input type="text" id="gndr"></input><br>
+            Enter IpAddress : <input type="text" id="ip-adrs"></input><br>
+            <button id="add-employee" >Add</button>
+        </div>
+    <!-- </form> -->
+    <table class="showData" id="showTbl">
+        <caption>Employee Details</caption>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>firstName</th>
+                <th>secondName</th>
+                <th>email</th>
+                <th>gender</th>
+                <th>IpAddress</th>
+            </tr>
+        </thead>
+        <tbody id="inner-body">
+            <tr>
+            </tr>
+        </tbody>
+    </table>
 
-    </div>
     <script type="module" src="app.js"></script>
+
 </body>
+
 </html>

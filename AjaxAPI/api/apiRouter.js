@@ -55,7 +55,7 @@ router.post('/employee', (request, response) => {
 
 router.put('/employee/:id', (request, response) => {
     let empId = request.params.id;
-    console.log(empId)
+    //console.log(empId)
     let updateEmployee = {
         id: empId,
         first_name: request.body.first_name,
@@ -74,7 +74,6 @@ router.put('/employee/:id', (request, response) => {
 });
 
 //Delete
-
 router.delete('/employee/:id', (request, response) => {
     let empId = request.params.id;
     employees = employees.filter((employee) => {
